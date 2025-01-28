@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asshole</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(135deg, #b11226, #f5e0d7);
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        body {
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #b11226, #f5e0d7);
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+nav {
+    width: 100%;
+    background: #b11226;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+}
+
+.storybook {
+    perspective: 1500px;
+    width: 90%; /* Responsive width */
+    height: 70%; /* Responsive height */
+    max-width: 700px; /* Optional max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5%;
+    background: #f5e0d7;
+    text-align: center;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.page img {
+    width: 70%; /* Scales image to fit */
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.navigation {
+    position: absolute;
+    bottom: -50px; /* Adjust placement */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #b11226;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .storybook {
+        height: 80%; /* Adjust height for smaller screens */
+    }
+
+    .page img {
+        width: 90%; /* Scale images further for smaller screens */
+    }
+
+    .navigation {
+        bottom: -30px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+        nav {
+            width: 100%;
+            background: #b11226;
+            color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .storybook {
+            perspective: 1500px;
+            width: 80%;
+            max-width: 700px;
+            height: 80%;
+            margin-top: 20px;
+        }
+
+        .page {
+            width: 100%;
+            height:80%;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            background: #f5e0d7;
+            text-align: center;
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+
+        .page:nth-child(even) {
+            transform: rotateY(180deg);
+        }
+
+        .chapter {
+            font-size: 2.8rem;
+            color: #b11226;
+            margin-bottom: 20px;
+        }
+
+        .page p {
+            font-size: 1rem;
+            margin-top: 10px;
+            line-height: 1.8;
+        }
+
+        .page img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            background: #b11226;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #8b0e1d;
+        }
+
+        .button:disabled {
+            background: #3b3a3a;
+            cursor: not-allowed;
+        }
+
+        footer {
+            margin-top: 50px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            color: #b11226;
+            padding: 30px 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .storybook {
+                height: 90%;
+            }
+
+            .chapter {
+                font-size: 2.0rem;
+            }
+
+            .page p {
+                font-size:1.2rem;
+                line-height: 1.5;
+            }
+
+            .page img {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .navigation {
+                bottom: -0px;
+            }
+
+            .button {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>I Love You Confidence</nav>
+    <div class="storybook">
+        <div class="book" id="book">
+            <div class="page" id="page1">
+                <div class="chapter">Chapter 1: How we Met</div>
+                <p>There was no grand moment, no dramatic music—just a simple conversation on Facebook. And yet, somehow, you became the one person I always wait to hear from, like a vigilante waiting for the signal. 🦇 You’re officially the longest chat streak I’ve ever had, and honestly, that’s kind of iconic. 💬🔥</p>
+                
+            </div>
+            <div class="page" id="page2">
+                <div class="chapter">Chapter 2: Fun Memories Together</div>
+                <p>✨ It’s not about grand gestures or public moments. 💐
+                    Our best memories are the quiet ones—the late-night conversations 🌙💬 when the world is asleep, just you and me. 🫂
+                    The humor we share in the shadows 😂🌌, the moments where silence speaks louder than words. 🤫❤️
+                    In this world of chaos, you’re my constant. 🌍💞</p>
+               
+            </div>
+            <div class="page" id="page3">
+                <div class="chapter">Chapter 3: What You Mean to Me</div>
+                <p>:
+
+                    💌 You’re my favorite person to message. Honestly, I don’t know if I’d survive without our endless chats. 📱💬
+                    Sometimes we’re like fire 🔥 and ice ❄️, but that’s what makes it interesting, right? 😏
+                    You’ve turned my notifications 🔔 into my favorite part of the day, and that’s saying a lot considering how toxic I am about my phone. 😅📲
+                    
+                    </p>
+                
+            </div>
+            <div class="page" id="page4">
+                <div class="chapter">Chapter 4: My Apology and Promise</div>
+                <p>Okay, I messed up with the whole "ghosting for a few years" thing. My bad. 🙈
+                    But hey, who’s perfect? 🤷‍♂️ I promise I’ll be better at not leaving you on read for too long. 📱👀
+                    You deserve better than my half-hearted replies. 💌 But don’t worry, I’ll make up for it in memes. 😂✨</p>
+                
+            </div>
+            <div class="page" id="page5">
+                <div class="chapter">Chapter 5: Goodbye</div>
+                <p>I’ve thought about everything 🤔💭, and I realize now that I’ve caused more harm than good. 💔 That’s not what I ever wanted for us. You deserve someone who lifts you up 🌟, not someone who adds to the weight you carry. 🧳😔
+
+                    As much as it hurts to say this 💧, I think stepping away is the best thing I can do for you—for us. 💭 You’ve been nothing but kind 🤝💖, and I can’t thank you enough for that. 🙏 I just wish I could’ve been better.
+                    
+                    Take care of yourself. 🌈✨ You deserve all the happiness in the world. 🌍💐
+                </p>
+                
+                <a href="https://youtu.be/YHbvrjY8K4s?si=y66qaruXP7_nd_Lu" class="button">If you forgive me, click this button</a>
+            </div>
+        </div>
+        <div class="navigation">
+            <button class="button" id="prev">Previous</button>
+            <button class="button" id="next">Next</button>
+        </div>
+    </div>
+    <footer style="font-size: 30px;">From the Asshole</footer>
+    <script>
+       const pages = document.querySelectorAll('.page');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+let currentPage = 0;
+
+function updatePages() {
+    pages.forEach((page, index) => {
+        if (index < currentPage) {
+            page.style.transform = 'rotateY(-180deg)';
+        } else if (index === currentPage) {
+            page.style.transform = 'rotateY(0deg)';
+        } else {
+            page.style.transform = 'rotateY(180deg)';
+        }
+    });
+
+    prevButton.disabled = currentPage === 0;
+    nextButton.disabled = currentPage === pages.length - 1;
+}
+
+nextButton.addEventListener('click', () => {
+    if (currentPage < pages.length - 1) {
+        currentPage++;
+        updatePages();
+    }
+});
+
+prevButton.addEventListener('click', () => {
+    if (currentPage > 0) {
+        currentPage--;
+        updatePages();
+    }
+});
+
+// Initialize page positions
+updatePages();
+
+    </script>
+</body>
+</html>
